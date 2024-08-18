@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import { AiFillHome, AiOutlineJavaScript } from "react-icons/ai";
+import { FaDocker, FaGraduationCap, FaJava } from "react-icons/fa";
+import { GoProject } from "react-icons/go";
+import { IoIosSunny } from "react-icons/io";
+import { motion } from "framer-motion";
+
+import Header from "./Component/Common/Header";
+import Career from "./Component/Home/Career";
+import Education from "./Component/Home/Education";
+import Projects from "./Component/Home/Projects";
+import Bio from "./Component/Home/Bio";
 
 function App() {
+  const [pointX, setPointX] = useState<number>(0);
+  const [pointY, setPointY] = useState<number>(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="bg-[#161616] min-h-screen flex flex-col items-center py-2 w-full"
+      onMouseMove={(e) => {
+        setPointX(e.clientX);
+        setPointY(e.clientY);
+      }}
+    >
+      <motion.div
+        className={`w-4 h-4 fixed bg-yellow-200/70 rounded-full`}
+        animate={{
+          top: pointY,
+          left: pointX,
+          transform: "translate(-50%, -50%)",
+        }}
+      />
+      <div className="w-[700px]">
+        <Header />
+        <Bio />
+        <Career />
+        <Projects />
+        <Education />
+      </div>
     </div>
   );
 }
