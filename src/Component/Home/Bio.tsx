@@ -1,14 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ProfilePic from "../../assets/image/profile-pic.png";
+import { Link } from "react-router-dom";
 
 function Bio() {
   return (
     <motion.div className="w-full drop-shadow-md py-5 px-3 rounded-xl  mt-5">
       <div className="flex items-center justify-between w-full">
-        <div>
+        <div className="flex flex-col items-start">
           <h1 className="text-white text-4xl">Jagdeep Singh</h1>
           <h2 className="text-white/80 text-lg ml-1">Software Engineer</h2>
+          <Link to="https://drive.google.com/file/d/1hAfg4Wli-P4ytlaZXpC6QXFK6yca3bLW/view?usp=sharing" target="_blank">
+            <div className="py-2 px-5 rounded-md font-bold bg-red-300 text-sm mt-3">
+              Download resume
+            </div>
+          </Link>
         </div>
         <div className="relative">
           <img

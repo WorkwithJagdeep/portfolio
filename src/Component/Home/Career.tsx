@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Career() {
   return (
@@ -81,7 +82,9 @@ function Career() {
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <div className="py-3 px-7 bg-red-300 rounded-lg"> Explore My Work</div>
+        <Link to="/works">
+          <div className="py-3 px-7 bg-red-300 rounded-lg cursor-pointer">Explore My Work</div>
+        </Link>
       </div>
     </div>
   );
