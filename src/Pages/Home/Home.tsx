@@ -25,7 +25,7 @@ function Home() {
           transform: "translate(-50%, -50%)",
         }}
       />
-      <div className="w-[700px] relative z-50">
+      <div className="w-[700px] relative z-50  max-[700px]:w-auto max-[700px]:px-4">
         <Header />
         <Bio />
         <Career />

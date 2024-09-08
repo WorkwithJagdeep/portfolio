@@ -1,26 +1,29 @@
-import React from "react";
 import { motion } from "framer-motion";
 import ProfilePic from "../../assets/image/profile-pic.png";
 import { Link } from "react-router-dom";
 
 function Bio() {
   return (
-    <motion.div className="w-full drop-shadow-md py-5 px-3 rounded-xl  mt-5">
-      <div className="flex items-center justify-between w-full">
-        <div className="flex flex-col items-start">
+    <motion.div className="w-full drop-shadow-md py-5 px-3 rounded-xl  mt-5 max-sm:mt-8">
+      <div className="flex items-center justify-between w-full max-sm:flex-col-reverse">
+        <div className="flex flex-col items-start max-sm:w-full">
           <h1 className="text-white text-4xl">Jagdeep Singh</h1>
           <h2 className="text-white/80 text-lg ml-1">Software Engineer</h2>
-          <Link to="https://drive.google.com/file/d/1hAfg4Wli-P4ytlaZXpC6QXFK6yca3bLW/view?usp=sharing" target="_blank">
-            <div className="py-2 px-5 rounded-md font-bold bg-red-300 text-sm mt-3">
+          <Link
+            to="https://drive.google.com/file/d/1hAfg4Wli-P4ytlaZXpC6QXFK6yca3bLW/view?usp=sharing"
+            target="_blank"
+            className="max-sm:w-full "
+          >
+            <div className="py-2 px-5 max-sm:py-4 max-sm:text-center max-sm:flex max-sm:items-center max-sm:justify-center  rounded-md font-bold bg-red-300 text-sm mt-3">
               Download resume
             </div>
           </Link>
         </div>
-        <div className="relative">
+        <div className="relative max-sm:mb-10">
           <img
             src={ProfilePic}
             alt=""
-            className="w-24 h-24 rounded-full border border-white"
+            className="w-24 h-24 rounded-full border border-white max-sm:w-32 max-sm:h-32"
           />
         </div>
       </div>

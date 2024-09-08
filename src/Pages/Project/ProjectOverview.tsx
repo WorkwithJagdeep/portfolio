@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { projects } from "../../Container/Data/Projects";
 import { useParams } from "react-router";
 import { FaArrowRight } from "react-icons/fa";
+import { features } from "process";
 
 function ProjectOverview() {
   const { projectId } = useParams();
@@ -41,7 +42,7 @@ function ProjectOverview() {
           transform: "translate(-50%, -50%)",
         }}
       />
-      <div className="w-[700px] relative z-50">
+      <div className="w-[700px] relative z-50  max-[700px]:w-auto max-[700px]:px-4">
         <Header />
 
         <div className="w-full drop-shadow-md py-5 px-3 rounded-xl mt-5">
@@ -89,7 +90,7 @@ function ProjectOverview() {
                     <img
                       src={image}
                       alt="app_overview"
-                      className="w-full h-[400px] object-contain"
+                      className="w-full h-[400px] object-contain max-md:h-[350px]"
                     />
                   </div>
                 )
@@ -100,27 +101,18 @@ function ProjectOverview() {
             <div className="text-white font-bold text-2xl mt-3">Features</div>
             <div>
               <ul>
-                <li className="text-white/80 mb-4">
-                  <span className="mr-2 text-white font-semibold">
-                    Anonymous Messaging:
-                  </span>{" "}
-                  Users can send anonymous messages to specific individuals or
-                  to public groups.
-                </li>
-                <li className="text-white/80 mb-4">
-                  <span className="mr-2 text-white font-semibold">
-                    Shared Experiences:
-                  </span>{" "}
-                  Users can share their screens or content in real-time for
-                  others to join. (backend functionality not yet implemented)
-                </li>
-                <li className="text-white/80 mb-4">
-                  <span className="mr-2 text-white font-semibold">
-                    Share Moment:
-                  </span>{" "}
-                  Users can upload and share pre-recorded videos.(backend
-                  functionality to be implemented in the future).
-                </li>
+                {currentProject?.feature?.map(
+                  (features: any, index: number) => (
+                    <>
+                      <li className="text-white/80 mb-4">
+                        <span className="mr-2 text-white font-semibold">
+                          {features?.title}
+                        </span>{" "}
+                        {features?.feature}
+                      </li>
+                    </>
+                  )
+                )}
               </ul>
             </div>
           </div>

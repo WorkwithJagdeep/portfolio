@@ -1,5 +1,10 @@
 import { v7 as uuidv7 } from "uuid";
 
+type feaure = {
+  title: string;
+  feature: string;
+};
+
 type Project = {
   id: string;
   name: string;
@@ -8,6 +13,7 @@ type Project = {
   githubLink: string;
   tech_stack: string[];
   app_image: string[];
+  feature: feaure[];
 };
 
 export const projects: Project[] = [
@@ -21,6 +27,22 @@ export const projects: Project[] = [
     githubLink: "https://github.com/WorkwithJagdeep/gaintrack.git",
     app_image: [],
     tech_stack: ["Typescript", "React Native", "Redux"],
+    feature: [
+      {
+        title: "Create Watchlists:",
+        feature: `Build personalized watchlists by adding stocks you're interested in tracking.`,
+      },
+      {
+        title: "Simulate Order Placement:",
+        feature:
+          "Experiment with simulated order placement to gain confidence before making real trades (backend functionality not yet implemented)",
+      },
+      {
+        title: "Access Stock Market News:",
+        feature:
+          "Stay informed with the latest developments impacting the market.",
+      },
+    ],
   },
   {
     id: "0191cb2b-3d79-7ee4-ab0b-48211791df35",
@@ -38,5 +60,21 @@ export const projects: Project[] = [
       "https://github.com/user-attachments/assets/cfad053a-800d-4554-940a-afcd503be5ed",
     ],
     githubLink: "https://github.com/WorkwithJagdeep/blurr.git",
+    feature: [
+      {
+        title: "Anonymous Messaging:",
+        feature: `Users can send anonymous messages to specific individuals or to public groups.`,
+      },
+      {
+        title: "Shared Experiences",
+        feature:
+          "Users can share their screens or content in real-time for others to join. (backend functionality not yet implemented)",
+      },
+      {
+        title: "Share Moment:",
+        feature:
+          "Users can upload and share pre-recorded videos.(backend functionality to be implemented in the future).",
+      },
+    ],
   },
 ];

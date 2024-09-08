@@ -29,8 +29,14 @@ function Header() {
             <FiExternalLink />
           </div>
         </Link>
-        <IoIosSunny color="#c5c5c5" size={25} />
-        <div className="bg-[#373737] py-1.5 text-sm rounded-md px-4 text-white/90 ml-5">
+
+        <div
+          className="bg-[#373737] py-1.5 text-sm rounded-md px-4 text-white/90 ml-5"
+          onClick={() => {
+            window.location.href =
+              "mailto:jagdeepsnh57@gmail.com?subject=Subject%20Here&body=Body%20Here";
+          }}
+        >
           Hire me
         </div>
       </div>

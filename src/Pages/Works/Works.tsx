@@ -28,9 +28,9 @@ function Works() {
           transform: "translate(-50%, -50%)",
         }}
       />
-      <div className="w-[700px] relative z-50">
+      <div className="w-[700px] relative z-50  max-[700px]:w-auto max-[700px]:px-4">
         <Header />
-        <div className="w-full drop-shadow-md py-5 px-3 rounded-xl mt-5">
+        <div className="w-full drop-shadow-md py-5 px-3 rounded-xl mt-5 max-md:px-0">
           <div className="text-white font-bold text-2xl">Work</div>
           <div>
             <div className="relative flex items-center justify-start">
@@ -44,7 +44,7 @@ function Works() {
                 </div>
                 <div className="relative border-l border-l-white/10 pb-9 mx-4">
                   <div className="w-3 h-3 rounded-full bg-red-300 top-2 -left-1.5 absolute"></div>
-                  <div className="mx-6  mt-9">
+                  <div className="mx-6  mt-9 max-md:ml-3 max-md:mr-0">
                     <h3 className="underline mt-3 mb-1 text-white/80">
                       Optimized Performance, Implemented Video Calling at
                       Skillkart
