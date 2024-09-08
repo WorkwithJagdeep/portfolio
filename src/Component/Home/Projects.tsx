@@ -37,7 +37,11 @@ function Projects() {
                   {project.overview.slice(0, 130)}
                 </div>
                 <div className="w-full flex items-center justify-between">
-                  <Link to={`projects/${project.id}`} className="w-1/2 mr-3">
+                  <Link
+                    to={project.githubLink}
+                    className="w-1/2 mr-3"
+                    target="_blank"
+                  >
                     {" "}
                     <div className="mt-3 py-2 px-7 w-full bg-white flex items-center justify-center rounded-md text-sm font-semibold">
                       <FaGithub />
@@ -45,11 +49,7 @@ function Projects() {
                       <FiExternalLink />
                     </div>
                   </Link>
-                  <Link
-                    to={`projects/${project.id}`}
-                    target="_blank"
-                    className="w-1/2 ml-3"
-                  >
+                  <Link to={`/projectoverview/${project.id}`} className="w-1/2 ml-3">
                     {" "}
                     <div className="mt-3 py-2 px-7 w-full bg-white flex items-center justify-center rounded-md text-sm font-semibold">
                       <span className="mx-2">Explore</span>
